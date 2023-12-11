@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Hello Vue</title>
+    <!--vue3最直接的使用方法，直接引用到html中使用-->
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app0">
+    <!-- 通过 `{{ 变量名 }}` 语法渲染响应式变量 -->
+    <p>Hello {{ userName }}!</p>
+
+    <!-- 通过 `v-model` 双向绑定响应式变量 -->
+    <!-- 通过 `@input` 给输入框绑定输入事件，输入的时候触发的事件 -->
+    <input
+            type="text"
+            v-model="userName"
+            placeholder="输入名称打招呼"
+            @input="printLog"
+    />
+
+    <!-- 通过 `@click` 给按钮绑定点击事件, click的时候触发一个叫reset的方法 -->
+    <button @click="reset">重置</button>
+    <button @click="register">注册</button>
+</div>
+
+<script>
+    //从Vue中导出需要用到的方法
+    const {createApp, ref} = Vue
+    //应该是一个工程的main方法
+    createApp({
+        // `setup` 是一个生命周期钩子, 页面渲染之前就会被执行的方法
+        //这个方法需要return出页面上用到的所有元素，包括数据和方法
+        setup() {
+            // 默认值
+            const DEFAULT_NAME = 'World'
+
+            // 用于双向绑定的响应式变量 把一个值绑定给页面上的一个对象
+            //这里定义这个常量，是因为页面上有这么个变量，所以需要用这个常量去填那个窟窿
+            const userName = ref(DEFAULT_NAME)
+
+            // 打印响应式变量的值到控制台
+            const printLog = function printLog() {
+                // `ref` 变量需要通过 `.value` 操作值
+                console.log(userName.value)
+            }
+
+            // 重置响应式变量为默认值
+            const reset = function reset() {
+                userName.value = DEFAULT_NAME
+                printLog()
+            }
+
+            const register = function register() {
+                var newUser = userName.value;
+                console.log('call backup server to save new user is ' + newUser)
+            }
+
+            // 需要 `return` 出去才可以被模板使用
+            return {userName, printLog, reset, register}
+        },
+    }).mount('#app0') //用#app0来实现getElementById
+</script>
+</body>
+</html>

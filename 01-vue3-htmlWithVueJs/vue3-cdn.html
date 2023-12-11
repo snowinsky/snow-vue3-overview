@@ -1,0 +1,23 @@
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<div id="app">
+    <p>
+        The first message = <span>{{ vuePageParam1 }}</span>
+    </p>
+    <p><input type="button" value="OK" @click="showMessage"/> </p>
+</div>
+
+<script>
+    const { createApp, ref } = Vue
+
+    createApp({
+        setup() {
+            const vuePageParam1 = ref('Hello vue!')
+            const showMessage = function (){
+                console.log("aaaaa")
+                vuePageParam1.value = new Date()
+            }
+            return {vuePageParam1, showMessage}
+        }
+    }).mount('#app')
+</script>

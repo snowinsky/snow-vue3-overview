@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vue3 小目标日记本</title>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+<div id="app">
+    <h1>小目标列表</h1>
+    <ul v-for="(item,index) in addList" :key="index">
+        <ol>
+           <span style="width: 160px">1 {{item}}1</span>
+            <span><button @click="delBtn(index)">删除</button></span>
+        </ol>
+    </ul>
+    <input type="text" v-model="message" @keyup.enter="add" placeholder="输入小目标后，按回车确认"/>
+    <h2>共有{{addList.length}}个小目标</h2>
+</div>
+<script type="text/javascript">
+    const {createApp, ref, reactive, toRefs} = Vue
+    const message = ref('')
+    const state = reactive({
+        addList: []
+    })
+    const add = () => {
+        if (message.value) {
+            state.addList.push(message.value)
+            message.value = ''
+        } else {
+            alert('没有输入小目标')
+        }
+    }
+    const delBtn = (index) => {
+        state.addList.splice(index, 1)
+    }
+    const app = {
+        setup() {
+            return {
+                message,
+                ...toRefs(state),
+                add,
+                delBtn
+            }
+        }
+    }
+    createApp(app).mount('#app')
+</script>
+</body>
+</html>
