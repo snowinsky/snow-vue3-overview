@@ -1,15 +1,25 @@
 import {createRouter, createWebHistory, RouteRecordRaw} from 'vue-router'
-
+// @ts-ignore
 import HelloWorld from '../components/HelloWorld.vue';
+// @ts-ignore
 import vue3SetupReturnObject from "../components/vue3-setup-returnObject.vue";
+// @ts-ignore
 import vue3SetupReturnFunction from "../components/vue3-setup-returnRenderFunction.vue";
+// @ts-ignore
 import vue3SetupRunOrder from "../components/vue3-setup-runOrder.vue";
+// @ts-ignore
 import vue3SetupParameters from "../components/vue3-setup-parameters.vue";
+// @ts-ignore
 import Vue3SlotTemplate1 from "../components/slot/vue3-slot-template1.vue";
+// @ts-ignore
 import SlotParent from "../components/slot/slot-parent.vue";
+// @ts-ignore
 import Vue3TemplateUsing from "../components/vue3-template-using.vue";
+// @ts-ignore
 import vue3ReactDemo from "../components/vue3-react-demo.vue";
+// @ts-ignore
 import vue3Watch from "../components/vue3-watch.vue"
+// @ts-ignore
 import vue3AsyncComponent from "../components/vue3-async-component.vue"
 
 import {computed} from "vue";
