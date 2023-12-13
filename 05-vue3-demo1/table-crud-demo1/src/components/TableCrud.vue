@@ -22,7 +22,7 @@
             <button @click="deleteOne(userOneIndex)">删除</button>
           </td>
         </tr>
-        <tr v-bind="user" v-show="userEditRowShow">
+        <tr v-show="userEditRowShow">
           <td><input v-model="user.id"/></td>
           <td><input v-model="user.enName"/></td>
           <td><input v-model="user.cnName"/></td>
