@@ -5,13 +5,252 @@
     <title>Title</title>
 </head>
 <body>
-<layout>
-    <layout-header>Header</layout-header>
-    <layout>
-        <a-layout-sider>Sider</a-layout-sider>
-        <a-layout-content>Content</a-layout-content>
-    </layout>
-    <a-layout-footer>Footer</a-layout-footer>
-</layout>
+
+<fieldset>
+    <legend>一块被框在一起的内容的标题</legend>
+
+    <input type="radio" id="kraken" name="monster" value="K"/>
+    <label for="kraken">内容1</label><br/>
+
+    <input type="radio" id="sasquatch" name="monster" value="S"/>
+    <label for="sasquatch">内容2</label><br/>
+
+    <input type="radio" id="mothman" name="monster" value="M"/>
+    <label for="mothman">内容3</label>
+</fieldset>
+
+<p>图片上可以被点击的几块</p>
+<map name="infographic">
+    <area
+            shape="poly"
+            coords="130,147,200,107,254,219,130,228"
+            href="234"
+            target="_blank"
+            alt="HTML"/>
+    <area
+            shape="poly"
+            coords="130,147,130,228,6,219,59,107"
+            href="#"
+            target="_blank"
+            alt="CSS"/>
+    <area
+            shape="poly"
+            coords="130,147,200,107,130,4,59,107"
+            href="#"
+            target="_blank"
+            alt="JavaScript"/>
+</map>
+<img usemap="#infographic" src="#" alt="MDN infographic"/>
+
+<p>&lt;mark&gt; 元素用于
+    <mark>高亮</mark>
+    文本
+</p>
+
+<p>
+    缩写，页面看不出什么 <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
+    Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
+    separate. This is called "separation of concerns."
+</p>
+
+<p>表示地址信息</p>
+<address>
+    <a href="mailto:jim@example.com">jim@example.com</a><br />
+    <a href="tel:+14155550132">+1 (415) 555‑0132</a>
+</address>
+
+<div contextmenu="popup-menu">菜单列表</div>
+<menu id="popup-menu">
+    <menuitem>Action</menuitem>
+    <menuitem>Another action</menuitem>
+    <menuitem>Separated action</menuitem>
+</menu>
+
+<article class="forecast">
+    <h1>article表示一篇文章中的一块</h1>
+    <article class="day-forecast">
+        <h2>03 March 2018</h2>
+        <p>Rain.</p>
+    </article>
+    <aside>
+        <p>aside就是嵌入广告用的</p>
+    </aside>
+    <article class="day-forecast">
+        <h2>04 March 2018</h2>
+        <p>Periods of rain.</p>
+    </article>
+    <article class="day-forecast">
+        <h2>05 March 2018</h2>
+        <p>Heavy rain.</p>
+    </article>
+</article>
+
+<p><bdi class="name">bdi</bdi><bdo class="name">bdo</bdo></p>
+
+<blockquote cite="https://www.huxley.net/bnw/four.html">
+    <p>长篇大论的引用，用这个</p>
+    <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
+</blockquote>
+
+<p>Regular text. <code>java 代码</code> Regular text.</p>
+
+
+<label for="fuel">表示分数:</label>
+<meter id="fuel" min="0" max="100" low="33" high="66" optimum="80" value="23">at 50/100</meter>
+
+<nav class="crumbs">
+    <ol>
+        <li class="crumb"><a href="#">Bikes</a></li>
+        <li class="crumb"><a href="#">BMX</a></li>
+        <li class="crumb">Jump Bike 3000</li>
+    </ol>
+</nav>
+
+<object type="application/pdf" data="/media/examples/In-CC0.pdf" width="250" height="200">123</object>
+
+<label for="dino-select">Choose a dinosaur:</label>
+<select id="dino-select">
+    <optgroup label="Theropods">
+        <option>Tyrannosaurus</option>
+        <option>Velociraptor</option>
+        <option>Deinonychus</option>
+    </optgroup>
+    <optgroup label="Sauropods">
+        <option>Diplodocus</option>
+        <option>Saltasaurus</option>
+        <option>Apatosaurus</option>
+    </optgroup>
+</select>
+
+
+<form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="range" name="b" value="50"/> +
+    <input type="number" name="a" value="10"/> =
+    <output name="result"></output>
+</form>
+
+<pre>
+  L          TE
+    A       A
+      C    V
+       R A
+       DOU
+       LOU
+      REUSE
+      QUE TU
+      PORTES
+    ET QUI T'
+    ORNE O CI
+     VILISÉ
+    OTE-  TU VEUX
+     LA    BIEN
+    SI      RESPI
+            RER       - Apollinaire
+</pre>
+
+<p>
+    L TE
+    A A
+    C V
+    R A
+    DOU
+    LOU
+    REUSE
+    QUE TU
+    PORTES
+    ET QUI T'
+    ORNE O CI
+    VILISÉ
+    OTE- TU VEUX
+    LA BIEN
+    SI RESPI
+    RER - Apollinaire
+</p>
+
+<label for="file">File progress:</label>
+
+<progress id="file" max="100" value="70">70%</progress>
+
+<p>
+    Everytime Kenny is killed, Stan will announce
+    <q cite="http://en.wikipedia.org/wiki/Kenny_McCormick#Cultural_impact">
+        Oh my God, you/they killed Kenny! </q
+    >.
+</p>
+
+<ruby> 汉
+    <rt>Hàn</rt>
+    字
+    <rt>Zì</rt>
+</ruby>
+
+<p>Regular text. <samp>This is sample text.</samp> Regular text.</p>
+
+<p>The chemical formula of water: H<sub>2</sub>O</p>
+
+<details>
+    <summary>I have keys but no doors. I have space but no room. You can enter but can’t leave. What am I?</summary>
+    A keyboard.
+</details>
+
+<p>The <em>Pythagorean theorem</em> is often expressed as the following equation:</p>
+
+<p>
+    <var>a<sup>2</sup></var> + <var>b<sup>2</sup></var> = <var>c<sup>2</sup></var>
+</p>
+<table border="1">
+    <caption>
+        Council budget (in £) 2018
+    </caption>
+    <thead>
+    <tr>
+        <th>Items</th>
+        <th scope="col">Expenditure</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <th scope="row">Donuts</th>
+        <td>3,000</td>
+    </tr>
+    <tr>
+        <th scope="row">Stationery</th>
+        <td>18,000</td>
+    </tr>
+    </tbody>
+    <tr>
+        <th scope="row">Donuts</th>
+        <td>3,000</td>
+    </tr>
+    <tr>
+        <th scope="row">Stationery</th>
+        <td>18,000</td>
+    </tr>
+</table>
+
+<p>
+    The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
+    Park.
+</p>
+
+<video controls src="/media/cc0-videos/friday.mp4">
+    <track default kind="captions" srclang="en" src="/media/examples/friday.vtt" />
+    Download the
+    <a href="/media/cc0-videos/friday.mp4">MP4</a>
+    video, and
+    <a href="/media/examples/friday.vtt">subtitles</a>.
+</video>
+
+<p>You could use this element to highlight <u>speling</u> mistakes, so the writer can <u>corect</u> them.</p>
+
+<p>
+    The volume of a box is <var>l</var> × <var>w</var> × <var>h</var>, where <var>l</var> represents the length,
+    <var>w</var> the width and <var>h</var> the height of the box.
+</p>
+
+<p>
+    http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr/>/level<wbr />/pages
+</p>
+
 </body>
 </html>
