@@ -10,7 +10,7 @@
     <legend>一块被框在一起的内容的标题</legend>
 
     <input type="radio" id="kraken" name="monster" value="K"/>
-    <label for="kraken">内容1</label><br/>
+    <label for="kraken">内容1 label点击label的时候指向具体的一个客编辑的属性</label><br/>
 
     <input type="radio" id="sasquatch" name="monster" value="S"/>
     <label for="sasquatch">内容2</label><br/>
@@ -19,14 +19,15 @@
     <label for="mothman">内容3</label>
 </fieldset>
 
-<p>图片上可以被点击的几块</p>
+<p>map和area图片上可以被点击的几块区域</p>
 <map name="infographic">
     <area
             shape="poly"
             coords="130,147,200,107,254,219,130,228"
             href="234"
             target="_blank"
-            alt="HTML"/>
+            alt="HTML">
+    map中的第一块区域</area>
     <area
             shape="poly"
             coords="130,147,130,228,6,219,59,107"
@@ -48,16 +49,25 @@
 </p>
 
 <p>
-    缩写，页面看不出什么 <abbr>CSS</abbr> (Cascading Style Sheets) to style your <abbr>HTML</abbr> (HyperText Markup Language).
-    Using style sheets, you can keep your <abbr>CSS</abbr> presentation layer and <abbr>HTML</abbr> content layer
-    separate. This is called "separation of concerns."
+    "&<;abbr/>"缩写，页面看不出什么 <abbr>CSS</abbr>
+    <br>CSS三个字库就是缩写
 </p>
 
-<p>表示地址信息</p>
+<p>
+    表示地址信息
 <address>
-    <a href="mailto:jim@example.com">jim@example.com</a><br />
+    <a href="mailto:jim@example.com">jim@example.com</a>
+    <br>
     <a href="tel:+14155550132">+1 (415) 555‑0132</a>
 </address>
+</p>
+
+<b>字体变粗体用b标签</b>
+
+<br>
+<base href="sdfasdfsf">
+base=url的根
+<br>
 
 <div contextmenu="popup-menu">菜单列表</div>
 <menu id="popup-menu">
@@ -66,33 +76,34 @@
     <menuitem>Separated action</menuitem>
 </menu>
 
-<article class="forecast">
+<article >
     <h1>article表示一篇文章中的一块</h1>
-    <article class="day-forecast">
-        <h2>03 March 2018</h2>
-        <p>Rain.</p>
+    <article >
+        <h2>第一块</h2>
     </article>
     <aside>
-        <p>aside就是嵌入广告用的</p>
+        <p>aside就是嵌入广告用的，表示和其他内容无关</p>
     </aside>
-    <article class="day-forecast">
-        <h2>04 March 2018</h2>
-        <p>Periods of rain.</p>
+    <article >
+        <h2>第二块</h2>
     </article>
-    <article class="day-forecast">
-        <h2>05 March 2018</h2>
-        <p>Heavy rain.</p>
+    <article>
+        <h2>第三块</h2>
     </article>
 </article>
 
-<p><bdi class="name">bdi</bdi><bdo class="name">bdo</bdo></p>
+<p>
+    <bdi dir="auto">bdi把这段问题的显示方向从父节点定义的方向中分离开来</bdi>
+    <br>
+    <bdo dir="rtl">bdo override覆盖bdi隔离的文字显示方向</bdo>
+</p>
 
 <blockquote cite="https://www.huxley.net/bnw/four.html">
-    <p>长篇大论的引用，用这个</p>
+    <p>长篇大论的引用，用blockquote</p>
     <footer>—Aldous Huxley, <cite>Brave New World</cite></footer>
 </blockquote>
 
-<p>Regular text. <code>java 代码</code> Regular text.</p>
+<p>Regular text. <code>code标签表示代码内容，java 代码</code> Regular text.</p>
 
 
 <label for="fuel">表示分数:</label>
@@ -229,12 +240,14 @@
 </table>
 
 <p>
-    The Cure will be celebrating their 40th anniversary on <time datetime="2018-07-07">July 7</time> in London's Hyde
+    The Cure will be celebrating their 40th anniversary on
+    <time datetime="2018-07-07">July 7</time>
+    in London's Hyde
     Park.
 </p>
 
 <video controls src="/media/cc0-videos/friday.mp4">
-    <track default kind="captions" srclang="en" src="/media/examples/friday.vtt" />
+    <track default kind="captions" srclang="en" src="/media/examples/friday.vtt"/>
     Download the
     <a href="/media/cc0-videos/friday.mp4">MP4</a>
     video, and
@@ -249,7 +262,49 @@
 </p>
 
 <p>
-    http://this<wbr />.is<wbr />.a<wbr />.really<wbr />.long<wbr />.example<wbr />.com/With<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr />/level<wbr />/pages<wbr />/deeper<wbr/>/level<wbr />/pages
+    http://this
+    <wbr/>
+    .is
+    <wbr/>
+    .a
+    <wbr/>
+    .really
+    <wbr/>
+    .long
+    <wbr/>
+    .example
+    <wbr/>
+    .com/With
+    <wbr/>
+    /deeper
+    <wbr/>
+    /level
+    <wbr/>
+    /pages
+    <wbr/>
+    /deeper
+    <wbr/>
+    /level
+    <wbr/>
+    /pages
+    <wbr/>
+    /deeper
+    <wbr/>
+    /level
+    <wbr/>
+    /pages
+    <wbr/>
+    /deeper
+    <wbr/>
+    /level
+    <wbr/>
+    /pages
+    <wbr/>
+    /deeper
+    <wbr/>
+    /level
+    <wbr/>
+    /pages
 </p>
 
 </body>
