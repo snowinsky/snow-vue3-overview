@@ -1,5 +1,9 @@
-import { createApp } from 'vue'
-import { createPinia } from 'pinia'
+//import { createApp } from 'vue'
+//import { createPinia } from 'pinia'
+
+import 'element-plus/theme-chalk/base.css'
+import 'element-plus/theme-chalk/display.css'
+import 'element-plus/theme-chalk/index.css'
 
 import App from './App.vue'
 import router from './router'
