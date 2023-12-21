@@ -4,10 +4,11 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(3)
 
-    function abc(cnt: number) {
-        return () => setCount((count) => count + 1)
+    function abc() {
+        console.log("current count = " + count)
+        setCount(count + 1)
     }
 
     return (
@@ -22,7 +23,7 @@ function App() {
             </div>
             <h1>Vite + React</h1>
             <div className="card">
-                <button onClick={abc(count)}>
+                <button onClick={abc}>
                     count is {count}
                 </button>
                 <p>

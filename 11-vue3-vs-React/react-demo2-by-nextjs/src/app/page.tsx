@@ -1,11 +1,10 @@
 import Image from 'next/image'
 import styles from './page.module.css'
 
+
+
 export default function Home() {
-
-
-    const abc = function (p: object) {
-        console.log('232423' + p)
+    function abc(event, num) {
         return undefined
     }
     return (
@@ -29,7 +28,7 @@ export default function Home() {
             </div>
 
             <div className={styles.grid}>
-                <button onClick={abc(this)}>这是一个button</button>
+                <button onClick = {event=>abc(event, 11)}>这是一个button</button>
             </div>
         </main>
     )
